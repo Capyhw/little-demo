@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>刮刮卡</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #c {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="c2" width="400" height="200"></canvas>
+
+    <canvas id="c" width="400" height="200"></canvas>
+
+    <script>
+        function clearArcFun(x, y, r, cxt) {    //(x,y)为要清除的圆的圆心，r为半径，cxt为context
+            var stepClear = 1;//别忘记这一步  
+            clearArc(x, y, r);
+            function clearArc(x, y, radius) {
+                var calcWidth = radius - stepClear;
+                var calcHeight = Math.sqrt(radius * radius - calcWidth * calcWidth);
+                var posX = x - calcWidth;
+                var posY = y - calcHeight;
+
+                var widthX = 2 * calcWidth;
+                var heightY = 2 * calcHeight;
+
+                if (stepClear <= radius) {
+                    cxt.clearRect(posX, posY, widthX, heightY);
+                    stepClear += 1;
+                    clearArc(x, y, radius);
+                }
+            }
+        }
+        const canvas2 = document.getElementById("c2");
+        const ctx2 = canvas2.getContext("2d");
+        const width = ctx2.canvas.width
+        const height = ctx2.canvas.height
+        console.log(width, height);
+        ctx2.font = '30px Arial'
+        ctx2.textAlign = 'center'
+        ctx2.textBaseline = 'middle'
+        ctx2.fillText('一等奖', width / 2, height / 2)
+
+
+
+        const canvas = document.getElementById("c");
+        const ctx = canvas.getContext("2d");
+        ctx.beginPath()
+        ctx.font = '30px Arial'
+        ctx.textAlign = 'center'
+        ctx.textBaseline = 'middle'
+        ctx.fillStyle = 'red'
+        ctx.fillRect(0, 0, width, height);
+        ctx.fillStyle = "#fff";
+        ctx.fillText("刮刮卡", width / 2, height / 2);
+        let isDraw = false;
+        let lastPoint;
+        canvas.onmousedown = function (e) {
+            isDraw = true;
+            lastPoint = e;
+        };
+        canvas.onmousemove = function (e) {
+            if (!isDraw) return;
+            ctx.beginPath()
+            const x = e.pageX - canvas.offsetLeft;
+            const y = e.pageY - canvas.offsetTop;
+            clearArcFun(x, y, 10, ctx)
+        };
+        canvas.onmouseup = canvas.onmouseout = function () {
+            isDraw = false;
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>剪切板</title>
+    <link rel="stylesheet" href="./1.css">
+</head>
+
+<body>
+
+    <div id="root">
+        <div id="left">
+            <h1>Copy Types</h1>
+            <div class="content textbox">
+                <h2>Text</h2>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <button>Copy</button>
+            </div>
+            <div class="content htmlbox">
+                <h2>HTML</h2>
+                <p>
+                    道可道,非常道
+                    <br>
+                    名可名,非常名
+                    <br>
+                    无名天地之始,有名万物之母
+                    <br>
+                    故常无欲,以观其妙
+                    <br>
+                    常有欲,以观其徼
+                    <br>
+                    此两者同出而异名,同谓之玄
+                    <br>
+                    玄之又玄,众妙之门
+                </p>
+                <button>Copy</button>
+            </div>
+            <div class="content jpgbox">
+                <h2>JPG</h2>
+                <img src="./image/1.jpg" alt="">
+                <button>Copy</button>
+            </div>
+        </div>
+        <div id="right">
+            <h1>Clipboard History</h1>
+            <div class="items">
+                <div class="item">
+                    <h2 class="item-type"></h2>
+                    <div class="item-content">
+                        这是剪切板内容
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./1.js"></script>
+</body>
+
+</html>

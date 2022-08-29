@@ -1,0 +1,12 @@
+.box1 {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+}
+.box2 {
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  background-color: burlywood;
+}

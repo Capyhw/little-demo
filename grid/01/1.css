@@ -1,0 +1,33 @@
+.wrapper {
+  display: grid;
+  /* 每一列的宽度 */
+  grid-template-columns: 100px 1fr minmax(100px, 2fr);
+  /* 每一行的高度 */
+  grid-template-rows: 50px 50px;
+  /* 实现同样的效果可以采用repeat写法 */
+  /* grid-template-rows: repeat(2, 50px); */
+  gap: 20px 10px;
+}
+.one {
+  background: #19caad;
+}
+.two {
+  background: #8cc7b5;
+}
+.three {
+  background: #d1ba74;
+}
+.four {
+  background: #bee7e9;
+}
+.five {
+  background: #e6ceac;
+}
+.six {
+  background: #ecad9e;
+}
+.item {
+  text-align: center;
+  font-size: 200%;
+  color: #fff;
+}

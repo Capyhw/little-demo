@@ -1,0 +1,15 @@
+.container {
+  overflow: hidden;
+}
+.box1 {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  margin: 100px;
+}
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: brown;
+  margin: 100px;
+}

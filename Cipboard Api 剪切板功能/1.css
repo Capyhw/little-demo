@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 2.6667vw;
+}
+#root {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+img {
+  width: 40vw;
+}
+
+button {
+  margin-top: 0.6667vw;
+}
+#left {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  background-color: rgba(0, 118, 253, 0.532);
+  margin: 1.3333vw 0;
+  padding: 1.3333vw;
+  display: flex;
+  flex-direction: column;
+}
+/* 右边开始 */
+#right {
+  display: flex;
+  flex-direction: column;
+  margin: 1.3333vw;
+}
+
+.item {
+  background-color: aquamarine;
+  margin: 1.3333vw 0;
+  padding: 1.3333vw;
+}

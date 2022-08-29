@@ -1,0 +1,10 @@
+.container {
+  overflow: hidden;
+  border: 1px solid royalblue;
+}
+.box1 {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+}
