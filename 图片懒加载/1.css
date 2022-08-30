@@ -1,0 +1,26 @@
+#box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+
+#list img {
+  width: 300px;
+  /* height: 200px; */
+  margin-bottom: 200px;
+}
+#list img.show {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
