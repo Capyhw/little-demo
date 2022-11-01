@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  /* width: 100vw; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 10px; /*高宽分别对应横竖滚动条的尺寸*/
+}
+::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  background-image: linear-gradient(45deg, #00aeff, #a68eff);
+}
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  background-color: rgb(255 255 255 / 10%);
+}

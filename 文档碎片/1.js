@@ -2,7 +2,7 @@ document.querySelector("#button").addEventListener("click", function () {
   // 记录任务开始时间
   let now = Date.now();
   // 插入一万条数据
-  const total = 100000;
+  const total = 10000;
   // 获取容器
   let ul = document.querySelector("#container");
   //创建文档碎片

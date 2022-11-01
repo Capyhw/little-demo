@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .list-container {
   height: 80vh;
   overflow: auto;
