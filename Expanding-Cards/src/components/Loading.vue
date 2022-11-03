@@ -18,7 +18,7 @@ interface Props {
 }
 const props = withDefaults(defineProps<Props>(), {
   title: "正在加载中",
-  time: 500,
+  time: 1000,
   loaded: false,
 });
 const loaded = ref(false);

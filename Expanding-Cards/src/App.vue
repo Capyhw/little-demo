@@ -1,6 +1,6 @@
 <template>
   <Loading class="loading" :loaded="loaded"></Loading>
-  <div class="root">
+  <div class="root" v-show="loaded">
     <ExpandingCards
       @get-length="handleGetLength"
       @img-loaded="handleImgLoaded"
