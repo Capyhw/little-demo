@@ -22,12 +22,22 @@ const props = withDefaults(defineProps<Props>(), {
   loaded: false,
 });
 const loaded = ref(false);
+const delay = () => new Promise((resolve) => setTimeout(resolve, props.time));
+
+let number = 0;
+let interval = setInterval(() => {
+  number++;
+}, props.time);
+
 watch(
   () => props.loaded,
-  (newVal) => {
-    setTimeout(() => {
-      loaded.value = newVal;
-    }, props.time);
+
+  async (newVal) => {
+    if (number < 1) {
+      await delay();
+    }
+    loaded.value = newVal;
+    clearInterval(interval);
   }
 );
 </script>
@@ -38,8 +48,8 @@ watch(
   width: 100vw;
   display: flex;
   justify-content: center;
-  opacity: 90%;
-  background-color: whitesmoke;
+  opacity: 80%;
+  background-color: rgba(0, 0, 0, 0.768);
 }
 .balls {
   width: 3.5em;

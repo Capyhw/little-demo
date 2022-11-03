@@ -16,7 +16,7 @@
 import { onMounted, Ref, ref } from "vue";
 const emits = defineEmits(["getLength", "imgLoaded"]);
 const backgroundImgList: Ref<string[]> = ref([]);
-const importImgs = import.meta.glob("../assets/*.png");
+const importImgs = import.meta.glob("../assets/*.webp");
 let importList = [];
 for (let path in importImgs) {
   let p = importImgs[path]().then((mod) => {

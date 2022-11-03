@@ -9,10 +9,14 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, computed, nextTick } from "vue";
-import ExpandingCards from "./components/ExpandingCards.vue";
+import { ref, defineAsyncComponent } from "vue";
 import Loading from "./components/Loading.vue";
 
+const ExpandingCards = defineAsyncComponent({
+  loader: () => import("./components/ExpandingCards.vue"),
+});
+
+/* 获取需要加载的图片数量 */
 const getImgsListLength = ref(0);
 const handleGetLength = (parames: number) => {
   getImgsListLength.value = parames;
